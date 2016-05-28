@@ -29,7 +29,10 @@ namespace COMP123_Assignment1
 
         private void _generateAbilities()
         {
-
+            Random rnd = new Random();
+            _strength = rnd.Next(1, 101);
+            _speed = rnd.Next(1,101);
+            _health = rnd.Next(1, 101);
         }
 
         private bool _hitAttempt()
@@ -51,6 +54,11 @@ namespace COMP123_Assignment1
         public void Show()
         {
 
+        }
+        public void Constructor(string name)
+        {
+            _name = name;
+            _generateAbilities();
         }
     }
 }
