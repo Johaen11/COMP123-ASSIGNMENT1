@@ -16,6 +16,9 @@ namespace COMP123_Assignment1
     {
         static void Main(string[] args)
         {
+            Hero hero = new Hero("Johaen");
+            hero.Show();
+            hero.Fight();
         }
     }
 }

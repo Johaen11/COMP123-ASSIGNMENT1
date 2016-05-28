@@ -76,7 +76,7 @@ namespace COMP123_Assignment1
 
 
         }
-        public void Constructor(string name)
+        public Hero(string name)
         {
             _name = name;
             _generateAbilities();
