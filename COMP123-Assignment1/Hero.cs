@@ -36,8 +36,16 @@ namespace COMP123_Assignment1
         }
 
         private bool _hitAttempt()
-        {
-            return;
+        {Random rnd = new Random();
+            if (rnd.Next(1, 101) <= 20)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+            
         }
 
         private int _hitDamage()
@@ -48,7 +56,13 @@ namespace COMP123_Assignment1
 
         public void Fight()
         {
-
+            if (_hitAttempt() == true)
+            {
+                _hitDamage();
+                Console.WriteLine("The Damage hit was {0}", _hitDamage());
+            }
+            else
+                Console.WriteLine("Hit Attempt Failed");
         }
 
         public void Show()
