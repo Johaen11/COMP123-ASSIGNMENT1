@@ -50,8 +50,11 @@ namespace COMP123_Assignment1
 
         private int _hitDamage()
         {
+            Random rnd = new Random();
 
-            return;
+            return rnd.Next(1, 7) * _strength;
+
+            
         }
 
         public void Fight()
@@ -67,6 +70,10 @@ namespace COMP123_Assignment1
 
         public void Show()
         {
+            Console.WriteLine("Strength: {0}", _strength);
+            Console.WriteLine("Health: {0}", _health);
+            Console.WriteLine("Speed: {0}", _speed);
+
 
         }
         public void Constructor(string name)
