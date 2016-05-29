@@ -8,7 +8,7 @@ using System.Threading.Tasks;
  * Author's Student#:300880309
  * Date Last Modified:05/28/2016
  * Program Description:
- * Revision History: Version 0.05
+ * Revision History: Version 0.06
  */ 
 namespace COMP123_Assignment1
 {
