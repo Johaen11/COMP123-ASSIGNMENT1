@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using COMP123_Assignment1;
 
 namespace UnitTestProject1
 {
@@ -9,6 +10,11 @@ namespace UnitTestProject1
         [TestMethod]
         public void generateAbilitiesTestMethod()
         {
+            Hero hero = new Hero("johaen");
+
+            hero.Fight();
+            hero.Show();
+
             //Arrange
             int _strength;
             int _speed;

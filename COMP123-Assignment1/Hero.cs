@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace COMP123_Assignment1
 {
-    class Hero
+    public class Hero
     {
         //Private Instance Variables
          private int _strength;
