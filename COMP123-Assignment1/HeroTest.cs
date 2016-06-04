@@ -6,18 +6,15 @@ using System.Threading.Tasks;
 
 namespace COMP123_Assignment1
 {
-    public class Hero
+    public class HeroTest
     {
         //Private Instance Variables
-         private int _strength;
-         private int _speed;
-         private int _health;
-         private string _name;
-        
+        private int _strength;
+        private int _speed;
+        private int _health;
+        private string _name;
 
-        /// <summary>
-        /// 
-        /// </summary>
+        //
         public string Name
         {
             get
@@ -28,24 +25,28 @@ namespace COMP123_Assignment1
             {
                 _name = value;
             }
-
         }
-        /// <summary>
-        /// /
-        /// </summary>
-        public void _generateAbilities()
+
+        public bool _generateAbilities()
         {
+            bool returnValue = false;
+
             Random rnd = new Random();
             _strength = rnd.Next(1, 101);
-            _speed = rnd.Next(1,101);
+            _speed = rnd.Next(1, 101);
             _health = rnd.Next(1, 101);
+
+            if(_strength > 0 && _strength < 101 && _speed > 0 && _speed < 101 && _health > 0 && _health < 101)
+            {
+                returnValue = true;
+            }
+
+            return returnValue;
         }
-        /// <summary>
-        /// /
-        /// </summary>
-        /// <returns></returns>
-        private bool _hitAttempt()
-        {Random rnd = new Random();
+
+        public bool _hitAttempt()
+        {
+            Random rnd = new Random();
             if (rnd.Next(1, 101) <= 20)
             {
                 return true;
@@ -54,20 +55,14 @@ namespace COMP123_Assignment1
             {
                 return false;
             }
-            
         }
 
-        private int _hitDamage()
+        public int _hitDamage()
         {
             Random rnd = new Random();
-
             return rnd.Next(1, 7) * _strength;
-
-            
         }
-        /// <summary>
-        /// /
-        /// </summary>
+
         public void Fight()
         {
             if (_hitAttempt() == true)
@@ -78,9 +73,7 @@ namespace COMP123_Assignment1
             else
                 Console.WriteLine("Hit Attempt Failed");
         }
-        /// <summary>
-        /// 
-        /// </summary>
+
         public void Show()
         {
             Console.WriteLine("Strength: {0}", _strength);
@@ -89,7 +82,7 @@ namespace COMP123_Assignment1
 
 
         }
-        public Hero(string name)
+        public HeroTest(string name)
         {
             _name = name;
             _generateAbilities();

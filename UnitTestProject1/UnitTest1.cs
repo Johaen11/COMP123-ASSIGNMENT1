@@ -10,9 +10,14 @@ namespace UnitTestProject1
         [TestMethod]
         public void generateAbilitiesTestMethod()
         {
-            Hero hero = new Hero("johaen");
+            HeroTest hero = new HeroTest("johaen");
 
-            hero.Fight();
+            bool expectedResult = true;
+            bool actualResult = hero._generateAbilities();
+
+            Assert.AreEqual(expectedResult, actualResult);
+            
+            /*hero.Fight();
             hero.Show();
 
             //Arrange
@@ -22,7 +27,7 @@ namespace UnitTestProject1
             int expectedResult;
             //Act
 
-            //Assert
+            //Assert*/
 
         }
 
@@ -39,6 +44,11 @@ namespace UnitTestProject1
         [TestMethod]
         public void hitDamage()
         {
+            HeroTest hero = new HeroTest("johaen");
+            
+            int actualResult = hero._hitDamage();
+
+            Assert.IsTrue(actualResult >= 1 && actualResult <= 600);
             //Arrange
 
             //Act
